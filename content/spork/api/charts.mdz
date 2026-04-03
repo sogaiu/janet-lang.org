@@ -1,0 +1,14 @@
+(import ../../gen-docs :as gen-docs)
+(import spork/charts :export true)
+(setdyn :source-linker (partial gen-docs/github-source-linker "janet-lang/spork" gen-docs/spork-version))
+(setdyn :no-community-examples true)
+
+{:title "charts"
+ :template "docpage.html"}
+ ---
+
+High quality data visualization and charting
+
+## Reference
+
+@gen-docs/gen-prefix-current[charts/]
