@@ -40,7 +40,7 @@
    ['lds '(lds dest) "$dest = current closure (self)"]
    ['ldt '(ldt dest) "$dest = true"]
    ['ldu '(ldu dest env index) "$dest = envs[env][index]"]
-   ['len '(len dest ds) "$dest = length(ds)"]
+   ['len '(len dest ds) "$dest = length($ds)"]
    ['lt '(lt dest lhs rhs) "$dest = $lhs < $rhs"]
    ['lte '(lte dest lhs rhs) "$dest = $lhs <= $rhs"]
    ['ltim '(ltim dest lhs im) "$dest = $lhs < im"]
