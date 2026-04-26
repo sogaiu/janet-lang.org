@@ -187,13 +187,13 @@ compiled to bytecode).
         @td{ Alias for @code`(look offset ?patt)` }}
 
     @tr{@td{@code`(to patt)` }
-        @td{ Match up to patt (but not including it). If the end of the input
-             is reached and patt is not matched, the entire pattern does not
-             match. }}
+        @td{ Match until patt is found (not including it in the match). If the
+             end of the input is reached without finding patt, the entire
+             pattern does not match. }}
 
     @tr{@td{@code`(thru patt)` }
-        @td{ Match up through patt (thus including it). If the end of the
-             input is reached and patt is not matched, the entire pattern
+        @td{ Match until patt is found (including it in the match). If the end
+             of the input is reached without finding patt, the entire pattern
              does not match. }}
 
     @tr{@td{@code`(backmatch ?tag)` }
