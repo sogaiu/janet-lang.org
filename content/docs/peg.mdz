@@ -227,7 +227,13 @@ compiled to bytecode).
              @code`split` will continue to match separators and patterns until
              it reaches the end of the input; if you don't want to match to the
              end of the input you should first narrow it with
-             @code`(sub ... (split ...))`. }}}
+             @code`(sub ... (split ...))`. }}
+
+    @tr{@td{@code`(til separator-patt patt)` }
+        @td{ If @code`(to separator-patt)` matches, match @code`patt` against
+             the characters that @code`(to separator-patt)` matched, and
+             advance as if @code`(thru separator-patt)` matched.  Any captures
+             in @code`(to separator-patt)` are dropped. }}}
 
 PEGs try to match an input text with a pattern in a greedy manner.  This means
 that if a rule fails to match, that rule will fail and not try again. The only
