@@ -213,11 +213,11 @@ compiled to bytecode).
 
     @tr{@td{@code`(sub window-patt patt)` }
         @td{ Match @code`window-patt`, and if it succeeds match
-             @code`patt` against the bytes that @code`window-patt` matched.
-             @code`patt` cannot match more than @code`window-patt`; it will
-             see end-of-input at the end of the substring matched by
-             @code`window-patt`. If @code`patt` also succeeds, @code`sub` will
-             advance to the end of what @code`window-patt` matched. }}
+             @code`patt` against the characters that @code`window-patt`
+             matched. @code`patt` cannot match more than @code`window-patt`;
+             it will see end-of-input at the end of the substring matched by
+             @code`window-patt`. If @code`patt` also succeeds, @code`sub`
+             will advance to the end of what @code`window-patt` matched. }}
 
     @tr{@td{@code`(split separator-patt patt)` }
         @td{ Split the remaining input by @code`separator-patt`, and execute
