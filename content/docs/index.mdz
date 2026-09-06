@@ -215,14 +215,26 @@ Hello, World!
 
 ## The core library
 
-Janet has a built in core library of over 300 functions and macros at the time
-of writing.  For efficient programming in Janet, it is good to be able to make
-use of many of these functions.
+Janet has a built-in core library of hundreds of functions and macros.
+For efficient programming in Janet, it is good to be able to make use
+of many of these.
 
-If at any time you want to see short documentation on a binding, use the
-@code[doc] macro to view the documentation for it in the REPL.
+To see short documentation for a binding (aka docstring), use the
+@code[doc] macro in the REPL.
 
-@codeblock[janet](```(doc defn) # -> Prints the documentation for "defn"```)
+@codeblock[janet](```
+# prints the docstring for defn
+(doc defn)
+```)
+
+The @code[doc] macro can also be used to search for binding names that
+contain a particular string by specifying a string instead of a
+symbol.
+
+@codeblock[janet](```
+# lists binding names containing the string "string"
+(doc "string")
+```)
 
 To see a list of all global bindings in the REPL, use the @code[doc] macro
 without arguments to print them out.
@@ -231,4 +243,17 @@ without arguments to print them out.
 
 Note: see the @code[all-bindings] function for related functionality.
 
-You can also browse the @link[/doc.html][core library API] on the website.
+You can also browse and search the @link[/doc.html][Core API page], a
+single page which contains for each global binding:
+
+@ul{
+  @li{a link to its source code}
+  @li{its docstring}
+  @li{an in-progress list of examples}
+  @li{a link to community examples}
+}
+
+Please note that the docstrings take for granted a certain degree of
+familiarity with Janet.  The website content, source code, and
+examples may be helpful in interpreting the docstrings.
+
